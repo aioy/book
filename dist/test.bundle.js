@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/test2.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/test2.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/test2.js":
-/*!**********************!*\
-  !*** ./src/test2.js ***!
-  \**********************/
+/***/ "./src/js/test2.js":
+/*!*************************!*\
+  !*** ./src/js/test2.js ***!
+  \*************************/
 /*! exports provided: cube */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

@@ -81,21 +81,21 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
-/*!*************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
-  \*************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/styles/style.scss":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/styles/style.scss ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".jew {\n    color:green;\n}\n\n", ""]);
+exports.push([module.i, ".jew {\n  color: red; }\n\nbody {\n  background-color: blue; }\n", ""]);
 
 
 
@@ -706,18 +706,18 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _test2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test2 */ "./src/test2.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _test2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test2 */ "./src/js/test2.js");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/style.scss */ "./src/styles/style.scss");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_style_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -725,24 +725,76 @@ __webpack_require__.r(__webpack_exports__);
 
 const c = document.createElement('div');
 
-c.innerHTML='jew';
+c.innerHTML='jfsdfsd123123123123123123f';
 
-c.classList.add('jasdadw');
+c.classList.add('jew');
 
 document.body.appendChild(c);
+
+// fetch('http://menu.com/menu/api/post/read.php')
+// .then(res => {
+//     if(res.ok){
+//         return res.json();
+//     } else {
+//         throw Error(`Request rejected with status ${res.status}`);
+//     }
+// })
+// .then((data) => {
+//     console.log(data);
+//     console.log('sdfsdf');
+// })
+// .catch(console.error);
+
+fetch("http://menu.com/menu/api/post/create.php", {
+  method: "POST",
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+
+  //make sure to serialize your JSON body
+  body: JSON.stringify({
+    'title' : 'test new new',
+    'body' : 'sample new new',
+    'author' : 'new new author',
+    'category_name' : '1'
+    
+  })
+})
+.then( (response) => { 
+   console.log(response);
+});
+
+/***/ }),
+
+/***/ "./src/js/test2.js":
+/*!*************************!*\
+  !*** ./src/js/test2.js ***!
+  \*************************/
+/*! exports provided: cube */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cube", function() { return cube; });
+function cube(x) {
+    return x * x * x;
+  }
+
+  
 
 
 /***/ }),
 
-/***/ "./src/style.css":
-/*!***********************!*\
-  !*** ./src/style.css ***!
-  \***********************/
+/***/ "./src/styles/style.scss":
+/*!*******************************!*\
+  !*** ./src/styles/style.scss ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/style.css");
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/lib/loader.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/styles/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -756,30 +808,11 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
-
-/***/ }),
-
-/***/ "./src/test2.js":
-/*!**********************!*\
-  !*** ./src/test2.js ***!
-  \**********************/
-/*! exports provided: cube */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cube", function() { return cube; });
-function cube(x) {
-    return x * x * x;
-  }
-
-  
-
 
 /***/ })
 

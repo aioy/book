@@ -2,8 +2,8 @@
     class Database {
         private $host = 'localhost';
         private $db_name = 'menu';
-        private $username = 'orpheus';
-        private $password = '0rpheus2#';
+        private $username = 'me';
+        private $password = '123';
         private $conn;
 
         public function connect() {

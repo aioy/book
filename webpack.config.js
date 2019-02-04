@@ -11,7 +11,7 @@ module.exports = {
     devServer: {
       contentBase: './dist',
       compress: true,
-      port: 9000
+      port: 8080,
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -32,6 +32,16 @@ module.exports = {
             'css-loader',
             'sass-loader'
           ]
+        },
+        {
+          test: /\.jsnpm$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['@babel/preset-env', {
+              'debug':true
+            }]
+          }
         },
         {
           test: /\.(png|svg|jpg|gif)$/,
