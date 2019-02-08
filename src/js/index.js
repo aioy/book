@@ -22,7 +22,6 @@ fetch('http://menu.com/menu/api/post/read.php')
 })
 .then((data) => {
     console.log(data);
-    console.log('sdfsdf');
 })
 .catch(console.error);
 
@@ -39,6 +38,40 @@ fetch('http://menu.com/menu/api/post/read.php')
 //     'body' : 'sample sdfsdfsdfsnew new',
 //     'author' : 'new nsdfsdfsdfsdew author',
 //     'category_id' : '2'
+//   })
+// })
+// .then( (response) => { 
+//    console.log(response);
+// });
+
+// //UPDATE
+// fetch("http://menu.com/menu/api/post/update.php", {
+//   method: "PUT",
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+
+//   body: JSON.stringify({
+//     'title' : 'blu ewwe blue blue new new new new',
+//     'body' : 'red red red red red red red',
+//     'author' : 'new new new blue blwer w322323e2',
+//     'category_id' : '2',
+//     'id' : '1'
+//   })
+// })
+// .then( (response) => { 
+//    console.log(response);
+// });
+
+// //Delete
+// fetch("http://menu.com/menu/api/post/delete.php", {
+//   method: "DELETE",
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+
+//   body: JSON.stringify({
+//     'id' : '1'
 //   })
 // })
 // .then( (response) => { 
