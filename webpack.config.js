@@ -2,10 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devtool: 'cheap-module-source-map',
   mode: 'development',
   entry: {
       app:'./src/js/index.js',
-      test:'./src/js/test2.js'
+      test:'./src/js/test2.js',
+      create: './src/js/create.js'
     },
     devtool: 'source-map ',
     devServer: {

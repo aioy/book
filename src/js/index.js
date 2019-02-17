@@ -1,43 +1,35 @@
 
 import { cube } from './test2';
+import { post, b } from './create.js'
 import '../styles/style.scss';
+import 'turn.js'
+import $ from 'jquery';
 
+post('bbbbbbbb','aaasdsadg','s','2');
 
-const c = document.createElement('div');
+// //read
+// fetch('http://menu.com/menu/api/post/read.php')
+// .then(res => {
+//     if(res.ok){
+//         return res.json();
+//     } else {
+//         throw Error(`Request rejected with status ${res.status}`);
+//     }
+// })
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch(console.error);
 
-c.innerHTML='jfsdfsd123123123123123123f';
-
-c.classList.add('jew');
-
-document.body.appendChild(c);
-
-//read
-fetch('http://menu.com/menu/api/post/read.php')
-.then(res => {
-    if(res.ok){
-        return res.json();
-    } else {
-        throw Error(`Request rejected with status ${res.status}`);
-    }
-})
-.then((data) => {
-    console.log(data);
-})
-.catch(console.error);
-
-//post
+// post
 // fetch("http://menu.com/menu/api/post/create.php", {
-//   method: "OPTIONS",
-//   headers: {
-//     'Accept': 'application/json',
-//     'Content-Type': 'application/json'
-//   },
-
+//   method: "POST",
+//   headers: new Headers(),
 //   body: JSON.stringify({
 //     'title' : 'tesdfsdfsd',
 //     'body' : 'sample sdfsdfsdfsnew new',
 //     'author' : 'new nsdfsdfsdfsdew author',
-//     'category_id' : '2'
+//     'category_id' : '1'
 //   })
 // })
 // .then( (response) => { 
@@ -63,17 +55,29 @@ fetch('http://menu.com/menu/api/post/read.php')
 //    console.log(response);
 // });
 
-// //Delete
-// fetch("http://menu.com/menu/api/post/delete.php", {
-//   method: "DELETE",
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
+//Delete
+function jj(id){
 
-//   body: JSON.stringify({
-//     'id' : '1'
-//   })
-// })
-// .then( (response) => { 
-//    console.log(response);
-// });
+
+    fetch("http://menu.com/menu/api/post/delete.php", {
+    method: "DELETE",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+
+    body: JSON.stringify({
+        'id' : id
+    })
+    })
+    .then( (response) => { 
+    console.log(response);
+    });
+}
+$("#flipbook").turn({
+    width: 400,
+    height: 300,
+    autoCenter: true
+  });
+  
+  let x = 'e';
+  console.log(x);
