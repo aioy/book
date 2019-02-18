@@ -79,5 +79,3 @@ $("#flipbook").turn({
     autoCenter: true
   });
   
-  let x = 'e';
-  console.log(x);
