@@ -4,7 +4,7 @@
   header('Content-Type: application/json');
   header('Access-Control-Allow-Methods: PUT, OPTIONS');
   header("Access-Control-Max-Age: 3600");
-  header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+  header('Access-Control-Allow-Headers: Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Headers');
   
   include_once '../../config/Database.php';
   include_once '../../models/Post.php';

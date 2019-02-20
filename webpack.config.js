@@ -5,9 +5,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   mode: 'development',
   entry: {
-      app:'./src/js/index.js',
-      test:'./src/js/test2.js',
-      create: './src/js/create.js'
+      app:'./src/js/index.js'
     },
     devtool: 'source-map ',
     devServer: {

@@ -26,7 +26,8 @@ const post = async (title, message, author, id) => {
     
     const settings = {
         method: 'POST',
-        headers: new Headers(),
+        headers: new Headers({
+        }),
         body: JSON.stringify({
             'title' : title,
             'body' : message,
