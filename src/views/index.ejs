@@ -7,11 +7,39 @@
   <body> 
     
     <div id="flipbook">
-      <div class="hard center" id='cover'> 
+      <div class="hard" id='cover'> 
         <h1>Picture Book</h1>
         <img src='https://360completeliving.com/wp-content/uploads/2014/11/unhealthy-food.jpg' alt='food'>
       </div> 
-      <div class='hard'> Page 1 </div>
+      <div class='hard input'> 
+        <h1>Add a Recipe</h1> 
+        <form>
+          <ul class='flex-outer'>
+            <li>
+              <label for='title'>Title</label>
+              <input type='text' id='title' placeholder='title'>
+            </li>
+            <li>
+              <label for='text'>Text</label>
+              <textarea rows='6' id='text' placeholder='text'></textarea>
+            </li>
+            <li>
+              <label for='author'>Author</label>
+              <input type='text' id='author' placeholder='author'>
+            </li>
+            <li>
+              <label for='type'>category</label>
+              <select name='type'>
+                <option value='recipe'>Recipe</option>
+                <option value='other'>Other</option>
+              </select>
+            </li>
+          </ul>
+          <div class='buttons-container'>
+            <input type='submit' value='submit' class='submit-button'>
+          </div>
+        </form>
+      </div>
       <div class='hard'> Page 2 </div>
       <div class='hard'> Page 3 </div>
     </div>

@@ -1,41 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css?family=Domine');
+
+$book-color: #4f4534;
+$sand: #c2b280;
+
+* {
+    box-sizing: border-box;
+  }
 html {
     height:100%;
 }
 body{
     margin:0;
     overflow:hidden;
-    background-color: black;
+    background-image: linear-gradient(to bottom left, #88e1f7, #f9fbfc);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Domine', serif;
 }
 
 
 #flipbook {
-    right: 5%;
-
+    right: 10%;
+    
     #cover {
         display:flex;
         flex-direction: column;
-        align-items: flex-start;
-        border: 1px solid red;
-
+        color:white;
         img{
-            width:8%;
-            height:8%;
+            width:45%;
+            height:45%;
+            border-radius:100px;
+            align-self: center;
+            margin-top: 10rem;
         }
     
-    }
-
-    .center {
-        display:flex;
-        justify-content: center;
+        h1 {
+            align-self: center;
+            margin: 6rem 0 0 0;
+            border-bottom: solid 1px black;
+          }
     }
 
     .hard{
-        background:blue;
+        background-image: linear-gradient(to left, #d3b681, #4f4534);
         color:#333;
         -webkit-box-shadow:inset 0 0 5px #666;
         -moz-box-shadow:inset 0 0 5px #666;
@@ -45,7 +56,71 @@ body{
         font-weight:bold;
     }
 
-    h1 {
-      align-self:flex-start;
+    
+
+    .input {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h1 {
+            align-self: center;
+            margin-top:2rem;
+        }
+
+        .flex-outer {
+            max-width: 550px;
+            
+           
+            li {
+                margin: 6rem 0;
+                display:flex;
+                flex-wrap:wrap;
+                align-items: center;
+                font-size: 18px;
+
+                input {
+                    border-radius: 25px;
+                    font-size: 15px;
+                    padding: 8px 16px;
+                    border: 1px solid $book-color;
+                }
+
+                label {
+                    text-align: center;
+                }
+            }
+            
+            label {
+                font-weight: bold;
+            }
+
+            > li > label {
+            flex: 1 0 120px;
+            max-width:220px;
+            }
+
+            #text {
+                width:215px;
+            }
+        }
+
+    }
+
+    .buttons-container{
+        display:flex;
+        justify-content: center;
+    }
+    .submit-button {
+        background:$sand;
+        height:3rem;
+        width:6rem;
+        border:none;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor:pointer;
+    }
+
+    .submit-button:hover{
+        background-color: #a69150;
     }
 }
